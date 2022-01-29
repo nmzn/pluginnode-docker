@@ -14,9 +14,9 @@ services:
       - "6688:6688"
       - "8080:8080"
     volumes:
-      - ${PWD}/plugin-deployment:/pluginAdm
+      - ./plugin-deployment:/pluginAdm
     env_file:
-      - ${PWD}/plugin-deployment/plugin.env
+      - ./plugin-deployment/plugin.env
 
   postgres-server-node:
     container_name: psql_node
@@ -28,7 +28,7 @@ services:
       POSTGRES_DB: plugin_mainnet_db
       PG_DATA: /var/lib/postgresql/data/pgdata #data storage
     volumes:
-      - ${PWD}/data_psql_node:/var/lib/postgresql/data
+      - ./data_psql_node:/var/lib/postgresql/data
 
   postgres-server-ei:
     container_name: psql_ei
@@ -40,4 +40,4 @@ services:
       POSTGRES_DB: plugin_mainnet_db
       PG_DATA: /var/lib/postgresql/data/pgdata #data storage
     volumes:
-      - ${PWD}/data_psql_ei:/var/lib/postgresql/data
+      - ./data_psql_ei:/var/lib/postgresql/data
