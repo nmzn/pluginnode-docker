@@ -16,7 +16,7 @@ services:
     volumes:
       - /opt/docker/goplugin/plugin-deployment:/pluginAdm
     env_file:
-      - ./plugin.env
+      - /opt/docker/goplugin/plugin-deployment/plugin.env
 
   postgres-server-node:
     container_name: psql_node
