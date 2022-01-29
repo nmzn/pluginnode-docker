@@ -37,7 +37,7 @@ services:
     environment:   # Username, password and database name variables
       POSTGRES_USER: dbuser
       POSTGRES_PASSWORD: plugin1234
-      POSTGRES_DB: plugin_mainnet_db
+      POSTGRES_DB: plugin_mainnet_ei
       PG_DATA: /var/lib/postgresql/data/pgdata #data storage
     volumes:
       - ./data_psql_ei:/var/lib/postgresql/data
