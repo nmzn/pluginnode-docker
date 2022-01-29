@@ -16,7 +16,7 @@ services:
     volumes:
       - ./plugin-deployment:/pluginAdm
     env_file:
-      - ./plugin-deployment/plugin.env
+      - ./plugin.env
 
   postgres-server-node:
     container_name: psql_node
