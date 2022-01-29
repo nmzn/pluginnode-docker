@@ -14,7 +14,7 @@ services:
       - "6688:6688"
       - "8080:8080"
     volumes:
-      - ./plugin-deployment:/pluginAdm
+      - /opt/docker/goplugin/plugin-deployment:/pluginAdm
     env_file:
       - ./plugin.env
 
