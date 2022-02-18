@@ -2,7 +2,7 @@ services:
   plinode:
     container_name: plinode
     image: goplugin/pluginode:v2
-    restart: always
+    restart: unless-stopped
     stdin_open: true # docker run -i
     tty: true        # docker run -t
     depends_on:
