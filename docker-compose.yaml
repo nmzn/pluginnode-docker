@@ -21,7 +21,7 @@ services:
   postgres-server-node:
     container_name: psql_node
     image: postgres:12-alpine
-    restart: always
+    restart: unless-stopped
     environment:   # Username, password and database name variables
       POSTGRES_USER: dbuser
       POSTGRES_PASSWORD: plugin1234
@@ -33,7 +33,7 @@ services:
   postgres-server-ei:
     container_name: psql_ei
     image: postgres:12-alpine
-    restart: always
+    restart: unless-stopped
     environment:   # Username, password and database name variables
       POSTGRES_USER: dbuser
       POSTGRES_PASSWORD: plugin1234
